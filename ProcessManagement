@@ -1,0 +1,7 @@
+# CHEAT BOOK #
+
+pgrep -u : The -u parameter shows the processes of target user
+Example: pgrep -u root
+
+pidof : dump target service or program ProcessIDNumber
+Example: pidof sshd
