@@ -1,36 +1,51 @@
 1- man : herhangi bir paket hakkında dökümanları gösterir
 ÖRNEK: man pwd
+
 2- info : man komutu yetmediğinde ve daha fazla dökümana ihtiyaç olduğunda kullanılır
 ÖRNEK: info pwd
+
 3- whatis : man kütüphanelerinde verilen parametre ile kütüphanelerde arar
 ÖRNEK: whatis ping
+
 4- apropos : aranan kelime ile ilgili bütün komutları listelemek için kullanılır
 ÖRNEK: apropos routing
+
 5- which : parametre olarak tanımlanan komutu PATH değişkeni içerisinde verilen dizinlede arar ve nerede olduğunu gösterir 
 ÖRNEK: which ls
+
 6- whereis : parametre olarak tanımlanan komutun çalıştırılabilir dosya konumunu ve komutun kütüphane dosyalarını gösterir(genel olarak which ile aynıdır tek farkı kütüphane dosyalarını gösterir)
 ÖRNEK: whereis whoami 
+
 7- file : belirtilen dosya hakkında bilgi verir
 ÖRNEK: file test.txt
+
 8- cd : belirtilen dizine gitmeyi sağlar
 ÖRNEK: cd /etc/
+
 9- pwd : hangi dizinde olduğumuzu gösterir
 ÖRNEK: pwd
+
 10- touch : verilen parametre ile boş bir dosya oluşturmamızı sağlar
 ÖRNEK: touch test
+
 11- mkdir : verilen parametre ile dizin oluşturmamızı sağlar
 ÖRNEK: mkdir testfile
+
 12- ls : bulunulan ya da hedef gösterilen dizini listeler
 ÖRNEK: bulunulan-> ls
 ÖRNEK: hedef gösterilen-> ls /home
 NOT: ls -1 bulunulan ya da hedef dizinde bulunan dosyaları liste olarak gösterir
+
 13- mv : dosya ya da klasör taşıma görevinde kullanılır(dosya ismi değiştirmek içinde kullanılabilir)
 ÖRNEK: dosyataşıma-> mv testFile /home/$USER/testFile
 ÖRNEK: isim değiştirme-> mv testFile testfile
+
 14- cp : kopyalama işlemi için kullanılır
 ÖRNEK: cp adosyasi /etc/adosyasi
+
 15- rmdir : klasör silmek için kullanılır
 ÖRNEK: rmdir testFolder/ 
+
 16- rm : herhangi bir dosya ya da klasör silmek için kullanılır
 ÖRNEK: rm dosyaadi
 ÖRNEK: rm -rf klasoradi/
@@ -39,46 +54,62 @@ NOT: ls -1 bulunulan ya da hedef dizinde bulunan dosyaları liste olarak göster
 16.2- Hard link: hard link dosya kaynağı silinse dahi çalışmaya devam edecektir
 ÖRNEK: Soft Link -> ln -s dosya1 ~/Desktop/dosya1
 ÖRNEK: Hard Link -> ln dosya1 ~/dosya1
+
 17- cat: Herhangi bir dosyanın içeriğini ekrana bastırmak için kullanılır
 ÖRNEK: cat dosyaadi
+
 18- more: herhangi bir dosyanın içeriğini düzenli olarak incelememiz için ekrana bastırır
 ÖRNEK: more dosyaadi
 NOT: SPACE tuşu ile aşağı B tuşu ile yukarı gidilebilir
+
 19- less: more komutu ile aynı işlevi gerçekleştirir fakat ok tuşları ile ilerleme yapılabiir
 ÖRNEK: less dosyaadi
 NOT: / işareti ile arama yapabilir
+
 20- rev: herhangi bir dosyanı satırlarını tersten yazdırır
 ÖRNEK: rev dosyaadi
+
 21- tail: tail komutu da dosya içeriğini görmemizi sağlar
 ÖRNEK: tail dosyaadi
 NOT: -n parametresi ile son satırı bastırır, yani -n 2 örneğinde olduğu gibi aşağıda bulunan son 2 satırı bastırır -> tail -n 2 dosyaadi 
+
 22- tac: cat komutunun tersine olarak alttan üste yazdırır ve bunu yukarıdan aşağı yazdırır
 ÖRNEK: tac dosyaadi
+
 23- join: her 2 dosyada bulunan ortak noktaları ekrana basar
 ÖRNEK join dosya1 dosya2
 NOT: sütün seçimi için dosyaları - parametresi ile ayarlar, örnek: join -1 2 -2 2 dosya1 dosya2 --> 2 dosyanında 2. sütununa bak ve ortak alanları bastır anlamına gelir
 UYARI: her 2 dosyada girişin sıralı düzende olması gerekmekte
+
 24- paste: 1. ve 2. dosyasnın içeriğini satır satır birleştirir
 ÖRNEK: paste dosya1 dosya2
 NOT: -d  ile ayraç ekleyebilirsin
 ÖRNEK: paste -d : dosya1 dosya2
 NOT: -s  ile tek bir satıra haline getir
 ÖRNEK: paste -s dosya1 dosya2
+
 25- split: Ddosyayı alt dosyalara bölme, parçalama işlemini gerçekleştirir
 NOT: Byte miktari ya da satırlara göre bölme işlemi yapar
 ÖRNEK: split -l 1 dosyaadi (dosyaadi adlı dosyayı her biri 1'er satırlık olan alt dosyalara böler)
 ÖRNEK: split -b dosyaadi (dosyaadi adlı dosyayı byte'lara göre böler)
+
 26- uniq: tekrar eden satırları engeller
 ÖRNEK: uniq dosyatesti
+
 27- cut: dosya içerisinde belirli alanları görmemizi sağlar
 ÖRNEK: cut -c 5,10 dosyaadi(her satırda bulunan 5. ve 10. karakterleri ekrana basar)
 ÖRNEK: cut -d : -f 2 dosyaadi(: sembolünü ayraç olarak kullan ve : sonra 2. sutunu ekrana bas)
+
 28- sort: dosya içerisinde bulunan verileri sıralamak için kullanılır
 ÖRNEK: cat dosyaadi | sort
+
 29- umask: klasör ya da dosya oluştururken ön tanımlı yetkileri ayarlar
 ÖRNEK : 0777 varsayarsak ben sadece user tarafında (rw) yetkisi olan yani 600 değerinde varsayılan tanımlı bir dizin ayarlamak istiyorsam
 -->  # 0777-0177=600 değerini alırım yani umask 0177 yaparsam bundan sonra o dizinde oluşacak herhangi bir klasör ya da dosya sadece user'a yazma yetkili olarak gelecektir
+
 30- xargs: verilen çıktıyı yakalar ve işlemize olanak sağlar
 ÖRNEK: echo "A B C" | xargs mkdir -> Bu örnek kod A B C değişkenlerini echo ile alır ve mkdir ile bu değişkenlerde klasörler oluşturur
 DAHA DETAYLI ÖRNEK: ls *.mp3 | xargs -I {} rm {} -> Bu detaylı örnekte ise mp3 dosyalarını listeler sonra xargs'ın I parametresi ile boş dizenin içine tanımlar sonrasında rm komutundan sonra bu dizeyi tanımlar
 
+31- awk : verilen çıktı dosyasını sütün olarak işleme görevini üstlenir
+ÖRNEK: cat dosya1 | awk -F : '{print $1 $3}' -> : sembolünü ayraç olarak kullan sonra 1. ve 2. sütunları ekrana bas 
