@@ -78,4 +78,7 @@ NOT: Byte miktari ya da satırlara göre bölme işlemi yapar
 29- umask: klasör ya da dosya oluştururken ön tanımlı yetkileri ayarlar
 ÖRNEK : 0777 varsayarsak ben sadece user tarafında (rw) yetkisi olan yani 600 değerinde varsayılan tanımlı bir dizin ayarlamak istiyorsam
 -->  # 0777-0177=600 değerini alırım yani umask 0177 yaparsam bundan sonra o dizinde oluşacak herhangi bir klasör ya da dosya sadece user'a yazma yetkili olarak gelecektir
+30- xargs: verilen çıktıyı yakalar ve işlemize olanak sağlar
+ÖRNEK: echo "A B C" | xargs mkdir -> Bu örnek kod A B C değişkenlerini echo ile alır ve mkdir ile bu değişkenlerde klasörler oluşturur
+DAHA DETAYLI ÖRNEK: ls *.mp3 | xargs -I {} rm {} -> Bu detaylı örnekte ise mp3 dosyalarını listeler sonra xargs'ın I parametresi ile boş dizenin içine tanımlar sonrasında rm komutundan sonra bu dizeyi tanımlar
 
