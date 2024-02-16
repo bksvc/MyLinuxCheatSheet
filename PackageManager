@@ -1,4 +1,5 @@
 # RPM #
+
 # -l : list
 # -q : query
 # -i : install
@@ -7,6 +8,7 @@
 # -f : show files
 # -U : update target package
 # -e : erase package
+
 rpm --rebuild : repair broken db files
 TR: RPM'e ait herhangi bir DB yapısı bozulduğunda onarım yapar
 
