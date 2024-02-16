@@ -8,24 +8,45 @@
 # -U : update target package
 # -e : erase package
 rpm --rebuild : repair broken db files
+TR: RPM'e ait herhangi bir DB yapısı bozulduğunda onarım yapar
+
 rpm -q : show installed package
+TR: Yüklü paketleri gösterir
 Example: rpm -q telnet
+
 rpm -qi : show installed package detailed information
+TR: Yüklü paketi detayları ile gösterir, ne zaman kurulduğun vs.
 Example: rpm -qi telnet
+
 rpm -qa : show all installed packages
+TR: Bütün yüklü paketleri gösterir
 Example: rpm -qa
+
 rpm -qf : indicates which package the specified file belongs to
+TR: Parametre olarak belirtilen dosyanın hangi pakete ait olduğunu gösterir
 Example: rpm -qf /etc/passwd
+
 rpm -ql : show all belong files an installed package
+TR: Yüklü olarak gelen paketi sorgular ve listeler
 Example: rpm -ql telnet
 Example2: rpm -ql telnet-0.17-66.el7.x86_64
+
 rpm -ivh : install package with the verbose mode use install progress bar
+TR: Paket yükleme işlemini detayları ve yükleme barı kullanarak yapar
 Example: rpm -ivh telnet-0.17-66.el7.x86_64.rpm
+
 rpm -Uvh : Update package
+TR: Paket yükleme esnasında yüklenen paketi günceller
 Example: rpm -Uvh rpmPackage.rpm
+
 rpm -V : show change in package structure after installation
+TR: Yüklenen pakete yükleme sonrasında değişiklik yapılıp yapılmadığını gösterir
 Example: rpm -V telnet
+
 rpm --checksig : check MD5 Hash
+TR: Yüklenen paketin MD5 Hash yapısını doğrular
 Example: rpm --checksig telnet-0.17-66.el7.x86_64.rpm 
+
 rpm -e : Remove installed package in your linux system
+TR: Yüklenen paketi kaldırır
 Example: rpm -e telnet
