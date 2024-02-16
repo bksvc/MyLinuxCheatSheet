@@ -1,2 +1,2 @@
 # LinuxFullStack
-THAT'S MY NOTEPAD
+This is my Linux cheat book
