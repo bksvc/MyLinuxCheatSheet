@@ -113,3 +113,6 @@ DAHA DETAYLI ÖRNEK: ls *.mp3 | xargs -I {} rm {} -> Bu detaylı örnekte ise mp
 
 31- awk : verilen çıktı dosyasını sütün olarak işleme görevini üstlenir
 ÖRNEK: cat dosya1 | awk -F : '{print $1 $3}' -> : sembolünü ayraç olarak kullan sonra 1. ve 2. sütunları ekrana bas 
+
+32- $# : değişken miktarı
+33- $! : last worked pid no

@@ -5,3 +5,6 @@ Example: pgrep -u root
 
 pidof : dump target service or program ProcessIDNumber
 Example: pidof sshd
+
+ps -el : show process with nice value
+Example: ps -el| less
