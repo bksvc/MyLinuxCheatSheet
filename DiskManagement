@@ -1,0 +1,12 @@
+# Typical fstab example #
+chooseDevicename chooseMountpointForDevice chooseDeviceFileSystem ChooseMountPointRules chooseBackupControl ChooseFSCKControl
+# Example 1: 
+/dev/sda				 /myhdd										 ext4                   defaults							0									  1
+
+# Example 2:
+/dev/sda1				 /myhdd2									 ext4										ro(only readable mount) 1(You told the dump command to make a backup of this volume) 1(first checking this volume by FSCK)
+
+# FSCK Parameter Cheat Sheet #
+0 : don't check this volume
+1 : first check this volume
+2 : after system booting check this volume
