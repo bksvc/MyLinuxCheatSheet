@@ -1,0 +1,4 @@
+# SEND COMPRESSED FILE TO SERVER #
+
+sudo dd if=/dev/sdb bs=4M | xz -e9 | ssh user@remote_server 'cat > /path/on/remote/server/backup.img.xz'
+
