@@ -10,3 +10,5 @@ chooseDevicename chooseMountpointForDevice chooseDeviceFileSystem ChooseMountPoi
 0 : don't check this volume
 1 : first check this volume
 2 : after system booting check this volume
+
+NOTE: If i apply settings after modify fstab, i can use mount -a command 
