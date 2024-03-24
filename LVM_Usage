@@ -1,0 +1,18 @@
+# LVM CREATE DISK #
+
+# Introducing the target disk to the system
+pvcreate /dev/sdb
+
+# Create volume group with "externalDisk" name
+vgcreate externalDisk /dev/sdb
+
+# Create logical volume with connect volume group
+# -L: Target size 
+# -n: Set created logical volume name
+lvcreate -L  +20G -n externalDiskVirtual1 externalDisk
+
+# Create file system
+mkfs.ext4 /dev/externalDisk/externalDiskVirtual1
+
+# Mount file system
+mount /dev/externalDisk/externalDiskVirtual1 /tmp
